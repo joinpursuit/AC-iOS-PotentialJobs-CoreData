@@ -47,15 +47,15 @@ extension ViewController {
     }
     
     private func fetchJobs() {
-//        // Create a fetch request
-//        let fetchRequest = NSFetchRequest<NSManagedObject>.init(entityName: "Job")
-//
-//        // Fetch from managed context
-//        do {
-//            jobs = try managedContext.fetch(fetchRequest)
-//        } catch let error as NSError {
-//            print("fetch jobs error: \(error), \(error.userInfo)")
-//        }
+        // Create a fetch request
+        let fetchRequest = NSFetchRequest<NSManagedObject>.init(entityName: "Job")
+
+        // Fetch from managed context
+        do {
+            jobs = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("fetch jobs error: \(error), \(error.userInfo)")
+        }
     }
     
     @objc private func addJob() {
@@ -90,17 +90,17 @@ extension ViewController {
     }
     
     private func delete(indexPath: IndexPath) {
-//        // Remove managed object from core data
-//        let job = jobs[indexPath.row ]
-//        managedContext.delete(job)
-//
-//        // Save the managed object context as to commit the changes
-//        do {
-//            try managedContext.save()
-//            jobs.remove(at: indexPath.row)
-//        } catch let error as NSError {
-//            print("delete error: \(error), \(error.userInfo)")
-//        }
+        // Remove managed object from core data
+        let job = jobs[indexPath.row ]
+        managedContext.delete(job)
+
+        // Save the managed object context as to commit the changes
+        do {
+            try managedContext.save()
+            jobs.remove(at: indexPath.row)
+        } catch let error as NSError {
+            print("delete error: \(error), \(error.userInfo)")
+        }
     }
 }
 
